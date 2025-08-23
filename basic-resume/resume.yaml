@@ -1,0 +1,91 @@
+personal:
+  name: "Akilan Rammohan"
+  location: "Los Altos, CA"
+  email: "akilan.rammohan@gmail.com"
+  github: "github.com/akilrammohan"
+  linkedin: "linkedin.com/in/akilan-rammohan-950818219"
+  phone: "+1 (650) 518-9684"
+  personal_site: "akil.foo"
+
+settings:
+  accent_color: "#26428b"
+  font: "New Computer Modern"
+  paper: "us-letter"
+  author_position: "left"
+  personal_info_position: "left"
+
+education:
+  - institution: "University of Wisconsin-Madison"
+    location: "Madison, WI"
+    dates:
+      start: "Sep 2022"
+      end: "May 2026"
+    degree: "Bachelor's of Arts, Computer Science and Data Science"
+    bullets:
+      - "Relevant Coursework: Algorithms, Data Structures, Machine Organization, Compiler Design, Computer Engineering, Discrete Math, Linear Algebra, Machine Learning, Deep Learning/Generative Models, Theory of Programming Languages"
+
+work:
+  - title: "AI Engineering Intern"
+    location: "Mountain View, CA"
+    company: "Appfaktors"
+    dates:
+      start: "May 2025"
+      end: "Present"
+    bullets:
+      - "Build RAG pipeline for unstructured enterprise software architecture data"
+      - "Architect data ingestion, vector embedding, and storage pipeline"
+      - "Test and evaluate dozens of permutations of LLMs and embedding models on structured architecture generation tasks"
+      - "Technologies: CrewAI, PostgreSQL/pgvector, Docker, OpenRouter, OpenAI and huggingface embeddings"
+  - title: "SAIL Fellow"
+    location: "Madison, WI"
+    company: "School of Computer, Data, and Information Sciences (CDIS)"
+    dates:
+      start: "May 2025"
+      end: "Aug 2025"
+    bullets:
+      - "Developed an agentic news aggregator, with the goal of developing a shared information canon"
+      - "Prompted agents to embed the intuition of a newspaper editorial board in their news sourcing efforts"
+      - "Sourced news data using RSS feeds, web scraping, and news APIs"
+      - "Technologies: CrewAI, Weaviate, Docker, OpenAI API, Next.js, FastAPI"
+  - title: "Data Analyst"
+    location: "Los Altos, CA"
+    company: "Think Fast Talk Smart, the podcast"
+    dates:
+      start: "May 2025"
+      end: "Present"
+    bullets:
+      - "Determine best evaluation metrics, use classical machine learning models to predict episode performance"
+      - "Explore optimal episode posting cadence and episode titling patterns"
+      - "Create insightful and clear visualizations for business team to understand"
+      - "Technologies: Python, SQL, matplotlib, pandas, Weaviate, OpenAI API, scikit-learn"
+  - title: "Undergraduate Researcher"
+    location: "Madison, WI"
+    company: "NeuroErgonomics Lab"
+    dates:
+      start: "May 2024"
+      end: "May 2025"
+    bullets:
+      - "Built a robust VR app for police training, and deployed to HTC Vive and Meta Quest 3"
+      - "Implemented LLM-enabled AI NPCs to replace in-person acting requirements of contemporary police training"
+      - "Developed prompt engineering framework through robust testing to ensure consistent AI behavior"
+      - "Technologies: Unity, C#, InworldAI, ConvAI, Python, R, Tobii, Pupil Labs"
+
+projects:
+  - name: "Deepfake Audio Detection (huggingface, pandas, Kaggle, librosa)"
+    bullets:
+      - "Compared CNN, transformer, and conformer neural network architectures for deepfake audio detection"
+      - "Finetuned downstream classifiers in open source wav2vec2 and wav2vec2-conformer sequence classification models"
+  - name: "TAVRFinder (Swift, SwiftUI)"
+    bullets:
+      - "Developed iOS app that uses sizing algorithms to properly size transcatheter aortic valve replacement devices"
+      - "Available on App Store (with adjustments for HIPAA compliancy, full app is in use at local hospitals"
+  - name: "NBA Win Predictor (scikit-learn, PyTorch, pandas, Kaggle)"
+    bullets:
+      - "Neural network classifier to predict a win or loss for a team given their matchup and season stats up to that point"
+      - "Achieved 64% prediction accuracy after hyperparameter search and other model improvements"
+
+skills:
+  programming_languages: "Python, Java, JavaScript/TypeScript, C, R, C#, Haskell, Swift"
+  technologies: "Git/Github, huggingface, Docker, CrewAI, Docker, FastAPI, PyTorch, Next.js, RAG"
+
+
