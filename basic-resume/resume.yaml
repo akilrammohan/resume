@@ -22,7 +22,7 @@ education:
       end: "May 2026"
     degree: "Bachelor's of Arts, Computer Science and Data Science"
     bullets:
-      - "Relevant Coursework: Algorithms, Data Structures, Machine Organization, Compilers, Computer Engineering, Discrete Math, Linear Algebra, Machine Learning, Deep Learning, Programming Languages, Operating Systems, Matrix Methods in ML, Game Theory and Learning"
+      - "Relevant Coursework: Algorithms, Data Structures, Machine Organization, Compilers, Computer Engineering, Discrete Math, Linear Algebra, Machine Learning, Deep Learning, Programming Languages, Operating Systems, Matrix Methods in ML, Algorithmic Game Theory"
 
 work:
   - title: "AI Engineering Intern"
@@ -32,9 +32,9 @@ work:
       start: "May 2025"
       end: "Aug 2025"
     bullets:
-      - "Built RAG pipeline for unstructured enterprise software architecture data"
+      - "Developed RAG pipeline for unstructured enterprise software architecture data"
       - "Architected data ingestion, vector embedding, and storage pipeline"
-      - "Tested and evaluateed dozens of permutations of LLMs and embedding models on structured architecture generation tasks"
+      - "Tested and evaluated dozens of permutations of LLMs and embedding models on structured architecture generation tasks"
       - "Technologies: CrewAI, PostgreSQL/pgvector, Docker, OpenRouter, OpenAI and huggingface embeddings"
   - title: "SAIL Fellow"
     location: "Madison, WI"
@@ -44,7 +44,7 @@ work:
       end: "Aug 2025"
     bullets:
       - "Developed an agentic news aggregator that handles bias and intelligently sources reputable news"
-      - "Used hierarchical agentic structure with orchestration agent powered by GPT-5"
+      - "Tested agent hierarchy with combinations of orchestration agent and multiple subagents"
       - "Sourced news data using RSS feeds, web scraping, and news APIs"
       - "Technologies: CrewAI, Weaviate, Docker, OpenAI API, Next.js, FastAPI"
   - title: "Data Analyst"
@@ -65,7 +65,7 @@ work:
       start: "May 2024"
       end: "May 2025"
     bullets:
-      - "Built a robust VR app for police training, and deployed to HTC Vive and Meta Quest 3"
+      - "Developed robust VR app for police training, deployed to HTC Vive and Meta Quest 3"
       - "Implemented LLM-enabled AI NPCs to replace in-person acting requirements of contemporary police training"
       - "Developed prompt engineering framework through robust testing to ensure consistent AI behavior"
       - "Technologies: Unity, C#, InworldAI, ConvAI, Python, R, Tobii, Pupil Labs"
@@ -84,7 +84,5 @@ projects:
       - "Achieved 64% prediction accuracy after hyperparameter search and other model improvements"
 
 skills:
-  programming_languages: "Python, Java, JavaScript/TypeScript, C, R, C#, Haskell, Swift"
-  technologies: "Git/Github, huggingface, Docker, CrewAI, FastAPI, PyTorch, Next.js, RAG"
-
-
+  programming_languages: "Python, Java, JavaScript/TypeScript, C, R, C#(Unity), Haskell, Swift"
+  technologies: "Cursor, CI/CD, LangGraph, Git/Github, Docker, FastAPI, REST APIs, SQL, PyTorch, Next.js, RAG"
