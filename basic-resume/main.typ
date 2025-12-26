@@ -1,109 +1,190 @@
-#import "@preview/basic-resume:0.2.8": *
-
+// Resume template - no external packages
 #let data = yaml("./resume.yaml")
 
-#let to-align(s) = if s == "left" { left } else if s == "right" { right } else { left }
+// Check if this is a public build (phone number will be masked)
+#let is-public = sys.inputs.at("public", default: "false") == "true"
 
-#show: resume.with(
+// Settings from YAML
+#let accent-color = rgb(data.settings.accent_color)
+
+// Mask phone number for public builds
+#let display-phone = if is-public { "+1 (XXX) XXX-XXXX" } else { data.personal.phone }
+
+// Helper function to format date ranges
+#let dates-helper(start, end) = {
+  start + " — " + end
+}
+
+// Section heading with small caps, accent color, and underline
+#let section-heading(title) = {
+  v(0.2em)
+  text(fill: accent-color, weight: "regular", size: 10pt)[
+    #smallcaps(title)
+  ]
+  v(-0.6em)
+  line(length: 100%, stroke: 0.5pt + accent-color)
+  v(0.15em)
+}
+
+// Two-column row helper (left and right aligned)
+#let two-col(left-content, right-content) = {
+  grid(
+    columns: (1fr, auto),
+    gutter: 1em,
+    left-content,
+    align(right, right-content)
+  )
+}
+
+// Education entry
+#let edu-entry(institution: "", location: "", degree: "", dates: "", bullets: ()) = {
+  two-col(
+    text(weight: "bold")[#institution],
+    text()[#location]
+  )
+  v(-0.6em)
+  two-col(
+    text(style: "italic")[#degree],
+    text(style: "italic")[#dates]
+  )
+  if bullets.len() > 0 {
+    v(-0.4em)
+    for b in bullets {
+      [- #b]
+    }
+  }
+}
+
+// Work entry
+#let work-entry(title: "", company: "", location: "", dates: "", bullets: ()) = {
+  two-col(
+    text(weight: "bold")[#title],
+    text()[#dates]
+  )
+  v(-0.6em)
+  two-col(
+    text()[#company],
+    text(style: "italic")[#location]
+  )
+  if bullets.len() > 0 {
+    v(-0.4em)
+    for b in bullets {
+      [- #b]
+    }
+  }
+}
+
+// Project entry
+#let project-entry(name: "", bullets: ()) = {
+  text(weight: "bold")[#name]
+  if bullets.len() > 0 {
+    v(-0.4em)
+    for b in bullets {
+      [- #b]
+    }
+  }
+}
+
+// Document setup
+#set document(
+  title: "Resume - " + data.personal.name,
   author: data.personal.name,
-  // All the lines below are optional.
-  // For example, if you want to to hide your phone number:
-  // feel free to comment those lines out and they will not show.
-  location: data.personal.location,
-  email: data.personal.email,
-  github: data.personal.github,
-  linkedin: data.personal.linkedin,
-  phone: data.personal.phone,
-  personal-site: data.personal.personal_site,
-  accent-color: data.settings.accent_color,
-  font: data.settings.font,
-  paper: data.settings.paper,
-  author-position: to-align(data.settings.author_position),
-  personal-info-position: to-align(data.settings.personal_info_position),
 )
 
-/*
-* Lines that start with == are formatted into section headings
-* You can use the specific formatting functions if needed
-* The following formatting functions are listed below
-* #edu(dates: "", degree: "", gpa: "", institution: "", location: "", consistent: false)
-* #work(company: "", dates: "", location: "", title: "")
-* #project(dates: "", name: "", role: "", url: "")
-* certificates(name: "", issuer: "", url: "", date: "")
-* #extracurriculars(activity: "", dates: "")
-* There are also the following generic functions that don't apply any formatting
-* #generic-two-by-two(top-left: "", top-right: "", bottom-left: "", bottom-right: "")
-* #generic-one-by-two(left: "", right: "")
-*/
-== Education
+#set page(
+  paper: data.settings.paper,
+  margin: (x: 0.5in, y: 0.35in),
+)
 
-#for edu-item in data.education [
-  #edu(
-    institution: edu-item.institution,
-    location: edu-item.location,
-    dates: dates-helper(start-date: edu-item.dates.start, end-date: edu-item.dates.end),
-    degree: edu-item.degree,
-  )
-  #if edu-item.bullets != none [
-    #for b in edu-item.bullets [
-      - #b
+#set text(
+  font: data.settings.font,
+  size: 10pt,
+)
+
+#set par(
+  justify: false,
+  leading: 0.5em,
+)
+
+// Style links with accent color
+#show link: it => text(fill: accent-color)[#underline(it)]
+
+// Reduce list spacing
+#set list(
+  tight: true,
+  indent: 0.2em,
+  body-indent: 0.4em,
+  spacing: 0.3em,
+)
+
+// ===== HEADER =====
+#grid(
+  columns: (1fr, auto),
+  align(left)[
+    #text(size: 24pt, weight: "bold")[
+      #underline(stroke: 1pt, offset: 3pt)[#data.personal.name]
+    ]
+  ],
+  align(right + horizon)[
+    #text(size: 10pt)[
+      #display-phone #h(0.3em) | #h(0.3em) #data.personal.location
     ]
   ]
+)
+
+#v(-0.3em)
+
+// Contact info line (links only)
+#text(size: 9.5pt)[
+  #link("mailto:" + data.personal.email)[#data.personal.email]
+  #h(0.3em) | #h(0.3em)
+  #link("https://" + data.personal.github)[#data.personal.github]
+  #h(0.3em) | #h(0.3em)
+  #link("https://" + data.personal.linkedin)[#data.personal.linkedin]
+  #h(0.3em) | #h(0.3em)
+  #link("https://" + data.personal.personal_site)[#data.personal.personal_site]
 ]
 
-== Work Experience
+// ===== EDUCATION =====
+#section-heading("Education")
 
-#for job in data.work [
-  #work(
+#for edu in data.education {
+  edu-entry(
+    institution: edu.institution,
+    location: edu.location,
+    degree: edu.degree,
+    dates: dates-helper(edu.start_date, edu.end_date),
+    bullets: if edu.bullets != none { edu.bullets } else { () }
+  )
+}
+
+// ===== WORK EXPERIENCE =====
+#section-heading("Work Experience")
+
+#for job in data.work {
+  work-entry(
     title: job.title,
-    location: job.location,
     company: job.company,
-    dates: dates-helper(start-date: job.dates.start, end-date: job.dates.end),
+    location: job.location,
+    dates: dates-helper(job.start_date, job.end_date),
+    bullets: if job.bullets != none { job.bullets } else { () }
   )
-  #if job.bullets != none [
-    #for b in job.bullets [
-      - #b
-    ]
-  ]
-]
+  v(0.1em)
+}
 
-== Projects
+// ===== PROJECTS =====
+#section-heading("Projects")
 
-#for p in data.projects [
-  #project(
+#for p in data.projects {
+  project-entry(
     name: p.name,
+    bullets: if p.bullets != none { p.bullets } else { () }
   )
-  #if p.bullets != none [
-    #for b in p.bullets [
-      - #b
-    ]
-  ]
-]
+  v(0.1em)
+}
 
-// == Extracurricular Activities
-//
-// #extracurriculars(
-//   activity: "Capture The Flag Competitions",
-//   dates: dates-helper(start-date: "Jan 2021", end-date: "Present"),
-// )
-// - Founder of Les Amateurs (#link("https://amateurs.team")[amateurs.team]), currently ranked \#4 US, \#33 global on CTFTime (2023: \#4 US, \#42 global)
-// - Organized AmateursCTF 2023 and 2024, with 1000+ teams solving at least one challenge and \$2000+ in cash prizes
-//   - Scaled infrastructure using GCP, Digital Ocean with Kubernetes and Docker; deployed custom software on fly.io
-// - Qualified for DEFCON CTF 32 and CSAW CTF 2023, two of the most prestigious cybersecurity competitions globally
+// ===== SKILLS =====
+#section-heading("Skills")
 
-// #extracurriculars(
-//   activity: "Science Olympiad Volunteering",
-//   dates: "Sep 2023 --- Present"
-// )
-// - Volunteer and write tests for tournaments, including LA Regionals and SoCal State \@ Caltech
-
-// #certificates(
-//   name: "OSCP",
-//   issuer: "Offensive Security",
-//   // url: "",
-//   date: "Oct 2024",
-// )
-
-== Skills
 - *Programming Languages*: #data.skills.programming_languages
 - *Technologies*: #data.skills.technologies
