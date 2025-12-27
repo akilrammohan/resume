@@ -14,3 +14,4 @@ jobs:
 
       - name: Build
         run: make
+        working-directory: basic-resume
