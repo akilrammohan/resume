@@ -15,15 +15,15 @@
   start + " — " + end
 }
 
-// Section heading with small caps, accent color, and underline
+// Section heading with small caps and underline
 #let section-heading(title) = {
   v(0.2em)
-  text(fill: accent-color, weight: "regular", size: 10pt)[
+  text(fill: black, weight: "regular", size: 10pt)[
     #smallcaps(title)
   ]
   v(-0.6em)
-  line(length: 100%, stroke: 0.5pt + accent-color)
-  v(0.15em)
+  line(length: 100%, stroke: 0.5pt + black)
+  v(-0.3em)
 }
 
 // Two-column row helper (left and right aligned)
@@ -48,7 +48,7 @@
     text(style: "italic")[#dates]
   )
   if bullets.len() > 0 {
-    v(-0.4em)
+    v(-0.3em)
     for b in bullets {
       [- #b]
     }
@@ -67,7 +67,7 @@
     text(style: "italic")[#location]
   )
   if bullets.len() > 0 {
-    v(-0.4em)
+    v(-0.3em)
     for b in bullets {
       [- #b]
     }
@@ -78,7 +78,7 @@
 #let project-entry(name: "", bullets: ()) = {
   text(weight: "bold")[#name]
   if bullets.len() > 0 {
-    v(-0.4em)
+    v(-0.3em)
     for b in bullets {
       [- #b]
     }
@@ -106,24 +106,22 @@
   leading: 0.5em,
 )
 
-// Style links with accent color
-#show link: it => text(fill: accent-color)[#underline(it)]
+// Style links with underline
+#show link: it => text(fill: black)[#underline(it)]
 
-// Reduce list spacing
+// Standardize list spacing
 #set list(
   tight: true,
   indent: 0.2em,
   body-indent: 0.4em,
-  spacing: 0.3em,
+  spacing: auto,
 )
 
 // ===== HEADER =====
 #grid(
   columns: (1fr, auto),
   align(left)[
-    #text(size: 24pt, weight: "bold")[
-      #underline(stroke: 1pt, offset: 3pt)[#data.personal.name]
-    ]
+    #text(size: 24pt, weight: "bold")[#data.personal.name]
   ],
   align(right + horizon)[
     #text(size: 10pt)[
@@ -169,7 +167,7 @@
     dates: dates-helper(job.start_date, job.end_date),
     bullets: if job.bullets != none { job.bullets } else { () }
   )
-  v(0.1em)
+  v(-0.1em)
 }
 
 // ===== PROJECTS =====
@@ -180,7 +178,7 @@
     name: p.name,
     bullets: if p.bullets != none { p.bullets } else { () }
   )
-  v(0.1em)
+  v(-0.1em)
 }
 
 // ===== SKILLS =====
