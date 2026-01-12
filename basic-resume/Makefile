@@ -3,10 +3,10 @@
 all: private public
 
 private:
-	typst compile main.typ main-private.pdf
+	typst compile main.typ Akil_Rammohan_Resume.pdf
 
 public:
-	typst compile --input public=true main.typ main.pdf
+	typst compile --input public=true main.typ Akil_Rammohan_Resume_Public.pdf
 
 clean:
-	rm -f main.pdf main-private.pdf
+	rm -f Akil_Rammohan_Resume.pdf Akil_Rammohan_Resume_Public.pdf
