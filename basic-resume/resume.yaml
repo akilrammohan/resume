@@ -73,4 +73,4 @@ projects:
 
 skills:
   programming_languages: "Python, Java, JavaScript/TypeScript, C, R, C#(Unity), Haskell, Swift"
-  technologies: "text embeddings, prompt engineering, Cursor/Claude Code, GitHub Actions, LangGraph, PyTorch, RAG, Git, Docker, FastAPI, PostgreSQL, Next.js, PyTest"
+  technologies: "Text Embeddings, Prompt Engineering, Cursor/Claude Code, GitHub Actions, LangGraph, PyTorch, RAG, Git, Docker, FastAPI, PostgreSQL, Next.js, PyTest"
