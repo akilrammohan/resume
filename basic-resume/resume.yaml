@@ -19,7 +19,7 @@ education:
     start_date: "Sep 2022"
     end_date: "May 2026"
     bullets:
-      - "Relevant Coursework: Algorithms, Data Structures, Machine Organization, Compilers, Computer Engineering, Discrete Math, Linear Algebra, Machine Learning, Deep Learning, Programming Languages, Operating Systems, Algorithmic Game Theory"
+        - "Relevant Coursework: Algorithms, Data Structures, Machine Organization, Compilers, Computer Engineering, Discrete Math, Linear Algebra, Machine Learning, Deep Learning, Theory and Design of Programming Languages, Operating Systems, Algorithmic Game Theory, Intro to Linguistics, Morphology, Syntax"
 
 work:
   - title: "Data Analyst"
@@ -28,7 +28,7 @@ work:
     start_date: "May 2025"
     end_date: "Sep 2025"
     bullets:
-      - "Explored optimal episode posting cadence and titling patterns using linear regression and vector embeddings to generate data-driven recommendations for content strategy"
+      - "Applied NLP techniques including semantic text analysis and vector embeddings to identify optimal episode titling patterns, generating data-driven content strategy recommendations"
       - "Translated business and strategy team directives into detailed statistical analyses, resulting in 50% more ad revenue"
       - "Technologies: Python, SQL, matplotlib, pandas, Weaviate, OpenAI API, scikit-learn"
   - title: "SAIL Fellow"
@@ -48,7 +48,7 @@ work:
     end_date: "May 2025"
     bullets:
       - "Developed VR application for de-escalation police training scenarios, deployed to HTC Vive and Meta Quest 3 headsets"
-      - "Implemented LLM-enabled AI NPCs to replace in-person acting requirements of contemporary police training"
+      - "Designed conversational AI agents using LLMs, engineering prompts for realistic dialogue in de-escalation scenarios"
       - "Led participant studies with 10+ UWPD officers, collected feedback, and implemented SME-recommended changes"
       - "Technologies: Unity, C#, InworldAI, ConvAI, Python, R, Tobii, Pupil Labs"
 
@@ -65,7 +65,7 @@ projects:
   - name: "TAVRFinder (Swift, SwiftUI)"
     bullets:
       - "Developed iOS app that uses sizing algorithms to properly size transcatheter aortic valve replacement devices"
-      - "Collaborated with cardiologists to gather requirements and iteratively refine sizing algorithms based on clinical feedback"
+      - "Collaborated with cardiologists to gather requirements and refine sizing algorithms based on clinical feedback"
   - name: "NBA Win Predictor (scikit-learn, PyTorch, pandas, Kaggle)"
     bullets:
       - "Built neural network classifier to predict a win or loss for a team given their matchup and season stats up to that point"
@@ -73,4 +73,4 @@ projects:
 
 skills:
   programming_languages: "Python, Java, JavaScript/TypeScript, C, R, C#(Unity), Haskell, Swift"
-  technologies: "Cursor/Claude Code, GitHub Actions, LangGraph, Git, Docker, FastAPI, PostgreSQL, PyTorch, Next.js, RAG, PyTest"
+  technologies: "text embeddings, prompt engineering, Cursor/Claude Code, GitHub Actions, LangGraph, PyTorch, RAG, Git, Docker, FastAPI, PostgreSQL, Next.js, PyTest"
