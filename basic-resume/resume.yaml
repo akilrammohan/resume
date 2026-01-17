@@ -53,7 +53,7 @@ work:
       - "Technologies: Unity, C#, InworldAI, ConvAI, Python, R, Tobii, Pupil Labs"
 
 projects:
-  - name: "Current side project: AI-powered Learning Management System (LangGraph, FastAPI, Docker, pgvector, Next.js, Vercel AI SDK)"
+  - name: "Current side project: AI-powered Learning Management System (TypeScript, Vercel AI SDK, Convex, Turborepo, Next.js)"
     bullets:
       - "Design agents to help educators manage course logistics and draft course materials"
       - "Implement adaptive AI tutor and reimagine lessons as chats with AI agents to better engage students"
@@ -73,4 +73,4 @@ projects:
 
 skills:
   programming_languages: "Python, Java, JavaScript/TypeScript, C, R, C#(Unity), Haskell, Swift"
-  technologies: "Text Embeddings, Prompt Engineering, Cursor/Claude Code, GitHub Actions, LangGraph, PyTorch, RAG, Git, Docker, FastAPI, PostgreSQL, Next.js, PyTest"
+  technologies: "Text Embeddings, Prompt Engineering, Cursor/Claude Code, GitHub Actions, LangGraph, Convex, Turborepo, PyTorch, RAG, Git, Docker, FastAPI, PostgreSQL, Next.js, PyTest"
