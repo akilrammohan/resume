@@ -19,7 +19,7 @@ education:
     start_date: "Sep 2022"
     end_date: "May 2026"
     bullets:
-        - "Relevant Coursework: Algorithms, Data Structures, Machine Organization, Compilers, Computer Engineering, Discrete Math, Linear Algebra, Machine Learning, Deep Learning, Theory and Design of Programming Languages, Operating Systems, Algorithmic Game Theory, Intro to Linguistics, Morphology, Syntax"
+        - "Relevant Coursework: Algorithms, Data Structures, Machine Organization, Compilers, Computer Engineering, Discrete Math, Linear Algebra, Machine Learning, Deep Learning, Theory and Design of Programming Languages, Operating Systems, Algorithmic Game Theory, Big Data, UI, Data Visualization, Intro to Linguistics, Morphology, Syntax"
 
 work:
   - title: "Data Analyst"
