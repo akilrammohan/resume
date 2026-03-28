@@ -170,6 +170,34 @@
   v(-0.1em)
 }
 
+// ===== PUBLICATIONS =====
+#section-heading("Publications")
+
+#for pub in data.publications {
+  // Parse citation: replace **text** with bold and *text* with italic
+  let parts = pub.citation.split("**")
+  for (i, part) in parts.enumerate() {
+    if calc.rem(i, 2) == 1 {
+      // Bold part
+      text(weight: "bold")[#part]
+    } else {
+      // Normal part - handle italics
+      let subparts = part.split("*")
+      for (j, subpart) in subparts.enumerate() {
+        if calc.rem(j, 2) == 1 {
+          text(style: "italic")[#subpart]
+        } else {
+          [#subpart]
+        }
+      }
+    }
+  }
+  if "doi" in pub {
+    [ ]
+    link(pub.doi)[#pub.doi]
+  }
+}
+
 // ===== PROJECTS =====
 #section-heading("Projects")
 

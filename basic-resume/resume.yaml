@@ -30,7 +30,6 @@ work:
     bullets:
       - "Applied NLP techniques including semantic text analysis and vector embeddings to identify optimal episode titling patterns, generating data-driven content strategy recommendations"
       - "Translated business and strategy team directives into detailed statistical analyses, resulting in 50% more ad revenue"
-      - "Technologies: Python, SQL, matplotlib, pandas, Weaviate, OpenAI API, scikit-learn"
   - title: "SAIL Fellow"
     company: "School of Computer, Data, and Information Sciences (CDIS)"
     location: "Madison, WI"
@@ -39,8 +38,7 @@ work:
     bullets:
       - "Developed an agentic news aggregator that detects and mitigates bias while aggregating from 50+ reputable sources"
       - "Designed hierarchical agent team, which sourced news data using RSS feeds, web scraping, and news APIs"
-      - "Built custom agent tools including web scrapers and summarizers, and a harness for orchestrating multi-agent workflows"
-      - "Technologies: CrewAI, Weaviate, Docker, OpenAI API, Next.js, FastAPI"
+      - "Built agent tools, web scrapers and summarizers, and a harness for orchestrating multi-agent workflows"
   - title: "Undergraduate Researcher"
     company: "NeuroErgonomics Lab"
     location: "Madison, WI"
@@ -50,7 +48,10 @@ work:
       - "Developed VR application for de-escalation police training scenarios, deployed to HTC Vive and Meta Quest 3 headsets"
       - "Designed conversational AI agents using LLMs, engineering prompts for realistic dialogue in de-escalation scenarios"
       - "Led participant studies with 10+ UWPD officers, collected feedback, and implemented SME-recommended changes"
-      - "Technologies: Unity, C#, InworldAI, ConvAI, Python, R, Tobii, Pupil Labs"
+
+publications:
+  - citation: "Mohanty, R.R., **Rammohan, A.**, Pater, K., Chen, W., & Mehta, R. (2025). Beyond Human Actors: Leveraging AI for Enhanced Public Safety XR Training. *Proceedings of the 69th HFES International Annual Meeting*."
+    doi: "https://doi.org/10.1177/10711813251379830"
 
 projects:
   - name: "Current side project: AI-powered Learning Management System (TypeScript, Vercel AI SDK, Convex, Turborepo, Next.js)"
@@ -69,7 +70,7 @@ projects:
   - name: "NBA Win Predictor (scikit-learn, PyTorch, pandas, Kaggle)"
     bullets:
       - "Built neural network classifier to predict a win or loss for a team given their matchup and season stats up to that point"
-      - "Achieved 64% prediction accuracy, a 12% improvement over baseline logistic regression, after hyperparameter search and feature engineering"
+      - "Performed hyperparameter search, feature engineering, and other model optimizations"
 
 skills:
   programming_languages: "Python, Java, JavaScript/TypeScript, C, R, C#(Unity), Haskell, Swift"
