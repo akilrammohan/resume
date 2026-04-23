@@ -22,6 +22,14 @@ education:
         - "Relevant Coursework: Algorithms, Data Structures, Machine Organization, Compilers, Computer Engineering, Discrete Math, Linear Algebra, Machine Learning, Deep Learning, Theory and Design of Programming Languages, Operating Systems, Algorithmic Game Theory, Big Data, UI, Data Visualization, Intro to Linguistics, Morphology, Syntax"
 
 work:
+  - title: "Junior Software Engineer"
+    company: "Mechanze"
+    location: "San Francisco, CA"
+    start_date: "April 2026"
+    bullets:
+      - "Build reinforcement learning environments to automate software engineering"
+      - "Design challenging software engineering tasks for frontier coding agents"
+      - "Develop robust procedural, rubric, and agent-based graders"
   - title: "Data Analyst"
     company: "Think Fast Talk Smart, the podcast"
     location: "Los Altos, CA"
@@ -54,9 +62,8 @@ publications:
     doi: "https://doi.org/10.1177/10711813251379830"
 
 projects:
-  - name: "Current side project: AI-powered Learning Management System (TypeScript, Vercel AI SDK, Convex, Turborepo, Next.js)"
+  - name: "Studia: AI-powered Learning Management System (TypeScript, Vercel AI SDK, Convex, Turborepo, Next.js)"
     bullets:
-      - "Design agents to help educators manage course logistics and draft course materials"
       - "Implement adaptive AI tutor and reimagine lessons as chats with AI agents to better engage students"
       - "Build agent tools and robustly test custom AI agents for course automation and material generation"
   - name: "Deepfake Audio Detection (huggingface, pandas, Kaggle)"
@@ -67,10 +74,6 @@ projects:
     bullets:
       - "Developed iOS app that uses sizing algorithms to properly size transcatheter aortic valve replacement devices"
       - "Collaborated with cardiologists to gather requirements and refine sizing algorithms based on clinical feedback"
-  - name: "NBA Win Predictor (scikit-learn, PyTorch, pandas, Kaggle)"
-    bullets:
-      - "Built neural network classifier to predict a win or loss for a team given their matchup and season stats up to that point"
-      - "Performed hyperparameter search, feature engineering, and other model optimizations"
 
 skills:
   programming_languages: "Python, Java, JavaScript/TypeScript, C, R, C#(Unity), Haskell, Swift"
